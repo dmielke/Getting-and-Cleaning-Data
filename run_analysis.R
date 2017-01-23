@@ -23,8 +23,8 @@ featuresWanted <- grep(".*mean.*|.*std.*", features[,2])
 
 ## Replace labels with descriptive activity names
 featuresWanted.names <- features[featuresWanted,2]
-featuresWanted.names = gsub('-mean', 'Mean', featuresWanted.names)
-featuresWanted.names = gsub('-std', 'Std', featuresWanted.names)
+featuresWanted.names <- gsub('-mean', 'Mean', featuresWanted.names)
+featuresWanted.names <- gsub('-std', 'Std', featuresWanted.names)
 featuresWanted.names <- gsub('[-()]', '', featuresWanted.names)
 
 
@@ -47,7 +47,7 @@ test <- read.table("test/X_test.txt")[featuresWanted]
 testActivities <- read.table("test/Y_test.txt")
 testSubjects <- read.table("test/subject_test.txt")
 
-## Combine testing subjects with their activities. Then, adjust column names.
+## Combine testing subjects with their activities. Then adjust column names to be more intuitive.
 test <- cbind(testSubjects, testActivities, test)
 names(test) <-c("Subject", "Activity", featuresWanted.names)
 
