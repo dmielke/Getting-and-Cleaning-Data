@@ -1,6 +1,4 @@
 
-setwd("C:/Users/davidmie/Desktop/Coursera/Getting and Cleaning Data")
-
 ## Download dataset using the link provided in the assignment discrition
 downloadFile <- "data/getdata_dataset.zip"
 downloadURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
